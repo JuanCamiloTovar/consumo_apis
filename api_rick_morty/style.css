@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: grid;
+    grid-template-rows: 5rem 4rem 1fr;
+    gap: 1rem;
+    place-items: center;
+    background-color: #121212;
+    color: #e0e0e0; 
+}
+
+.container_bar {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+    width: 83%;
+    border-radius: 10px;
+    padding: 1rem;
+    background-color: #1e1e1e; 
+    box-shadow: 0 4px 12px #0000004d;
+    border-bottom: 1px solid #333;
+}
+
+.cards-container {
+    background-color: #2d2d2d;
+    max-width: 100%;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    margin: 1rem;
+    border: 1px solid #444;
+}
+
+.card {
+    background: linear-gradient(145deg, #464d63, #2d2d2d);
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 1px solid #555;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(145deg, #545c77, #333);
+}
+
+.card > img {
+    border: 2px solid #3498db;
+    border-radius: 8px;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    filter: brightness(0.95);
+}
+
+.card > img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.05);
+}
+
+.col {
+    width: calc(33.33% - 1em);
+    margin-bottom: 1.5rem;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+@media (min-width: 769px) and (max-width: 991px) {
+    .card > img {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media (max-width: 768px) {
+    .col {
+        width: 100%;
+    }
+    
+    .card > img {
+        width: 150px;
+        height: 150px;
+    }
+}
