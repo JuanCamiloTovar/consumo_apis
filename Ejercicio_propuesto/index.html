@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script src="scipt.js"></script>
+    <title>API-Games</title>
+</head>
+<body style="display: flex; flex-direction: column; gap: 30px;">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" style="position: sticky; top: 0;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="/img/pngtree-video-game-controller-with-detail-illustration-vector-png-image_8995952.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
+                API-Games
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="https://www.freetogame.com/api-doc" target="_blank">Docs</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#footer">Contact</a>
+                </li>
+            </ul> 
+            </div>
+        </div>
+    </nav>
+    <div class="container" style="margin: auto; text-align: center;">
+        <h1>Lista de juegos gratuitos</h1>
+    </div>
+
+    <div class="container" style="background-color: #dddcdc; height: 40px; display: flex; justify-content: center; align-items: center; gap: 85px;">
+        <select name="" id="plaftform">
+            <option value="" selected disabled>Selecione la plataforma</option>
+            <option value="pc">PC</option>
+            <option value="browser">Browser</option>
+            <option value="all">Todo</option>
+        </select>
+        <select name="" id="sorted">
+            <option value="" selected disabled>Selecione la categoria</option>
+            <option value="strategy">Strategy</option>
+            <option value="moba">Moba</option>
+            <option value="racing">racing</option>
+            <option value="sports">sports</option>
+            <option value="social">social</option>
+            <option value="open-world">open-world</option>
+            <option value="pvp">pvp</option>
+            <option value="pixel">pixel</option>
+            <option value="zombie">zombie</option>
+            <option value="tank">tank</option>
+            <option value="space">space</option>
+            <option value="sailing">sailing</option>
+            <option value="side-scroller">side-scroller</option>
+            <option value="superhero">superhero</option>
+            <option value="permadeath">permadeath</option>
+            <option value="card">card</option>
+            <option value="battle-royale">battle-royale</option>
+            <option value="anime">anime</option>
+            <option value="fantasy">fantasy</option>
+            <option value="sci-fi">sci-fi</option>
+            <option value="fighting">fighting</option>
+            <option value="action">action</option>
+            <option value="horror">horror</option>
+        </select>
+        <select name="" id="category">
+            <option value="" selected disabled>Ordenar por</option>
+            <option value="release-date">Fecha de lanzamiento</option>
+            <option value="popularity">Popularidad</option>
+            <option value="alphabetical ">Alfabeto</option>
+            <option value="popularity">Popularidad</option>
+            <option value="relevance">Relevancia</option>
+        </select>
+        <button type="button">Buscar</button>
+    </div>
+    <div class="container text-center" style="background-color: #dddcdc; padding: 1rem 2rem;border-radius: 5px;">
+        <div class="row row-cols-4 gx-3 gy-3" id="games">
+            <div class="col" style="background-color: #eee; border-radius: 5px; padding: 1px;">
+                
+            </div>
+        </div>
+    </div>
+    <script>
+        consulta_juegos();
+    </script>
+</body>
+</html>
